@@ -9,6 +9,7 @@
  */
 export function sortArray(numbers: number[]): number[] {
     // 請在此處寫下你的程式碼
+    return numbers.sort();
 }
 
 /**
@@ -23,7 +24,11 @@ export function sortArray(numbers: number[]): number[] {
  */
 export function filterArray(numbers: number[], predicate: (num: number) => boolean): number[] {
     // 請在此處寫下你的程式碼
+    return numbers.filter(number => {
+        return predicate(number);
+    })
 }
+
 
 /**
  * 任務：實作一個函式 `transformArray`，將數字陣列中的每個元素進行轉換。
@@ -37,4 +42,7 @@ export function filterArray(numbers: number[], predicate: (num: number) => boole
  */
 export function transformArray(numbers: number[], transform: (num: number) => number): number[] {
     // 請在此處寫下你的程式碼
+    return numbers.map( number => {
+        return transform(number)
+    })
 }
