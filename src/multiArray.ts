@@ -7,7 +7,14 @@
  * 輸入: [[1, 2], [3, 4], [5, 6]]
  * 輸出: [[2, 4], [6, 8], [10, 12]]
  */
-
-export function processMultiArray(arr) {
+export function processMultiArray(arr:number[][]):number[][] {
     // 在此實現函式
+    let result:number[][] = []
+    arr.forEach((numArray:number[]) => {
+        const item = numArray.map(number=> {
+            return number*2;
+        })
+        result.push(item);
+    })
+    return result;
 }
